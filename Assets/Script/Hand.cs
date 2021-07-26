@@ -6,5 +6,6 @@ namespace Murgn.Player
     public class Hand : MonoBehaviour
     {
         public State state;
+        public Sprite[] handSprites;
     }   
 }

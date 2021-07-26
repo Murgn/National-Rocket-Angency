@@ -9,14 +9,12 @@ namespace Murgn.Player
     public class HandController : MonoBehaviour
     {
         private Hand hand;
-        private Image handImage;
-
-        public Sprite[] handSprites;
+        private Image sprite;
         
         void Awake()
         {
             hand = GetComponent<Hand>();
-            handImage = transform.GetChild(0).GetComponent<Image>();
+            sprite = transform.GetChild(0).GetComponent<Image>();
         }
 
         void Update()
@@ -30,15 +28,15 @@ namespace Murgn.Player
             switch(hand.state)
             {
                 case State.Idle:
-                handImage.sprite = handSprites[0];
+                sprite.sprite = hand.handSprites[0];
                 return;
                 
                 case State.Interactable:
-                handImage.sprite = handSprites[1];
+                sprite.sprite = hand.handSprites[1];
                 return;
 
                 case State.Grab:
-                handImage.sprite = handSprites[2];
+                sprite.sprite = hand.handSprites[2];
                 return;
             }
         }
