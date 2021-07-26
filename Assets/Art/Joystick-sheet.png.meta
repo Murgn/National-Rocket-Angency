@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: d2b28a7ab206ab54b83e833b27543608
+guid: 2c4549a6ef7502c47b327f30e79305e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1624108181874779714
-    second: Hands_0
+      213: -6799142018886328909
+    second: Joystick-sheet_0
   - first:
-      213: 4710320323224341537
-    second: Hands_1
+      213: -6608240251401846750
+    second: Joystick-sheet_1
   - first:
-      213: -3607849992788312949
-    second: Hands_2
+      213: 511836695295341296
+    second: Joystick-sheet_2
+  - first:
+      213: -5489892689437464925
+    second: Joystick-sheet_3
+  - first:
+      213: 4315996322255733795
+    second: Joystick-sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,55 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hands_0
+      name: Joystick-sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb95c86a6320679e0800000000000000
-      internalID: -1624108181874779714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hands_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12c071ca06b6e5140800000000000000
-      internalID: 4710320323224341537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hands_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +132,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8cf4f8fb875eedc0800000000000000
-      internalID: -3607849992788312949
+      spriteID: 3bd19d27b5894a1a0800000000000000
+      internalID: -6799142018886328909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22041c8d080da44a0800000000000000
+      internalID: -6608240251401846750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2b61633c86a1700800000000000000
+      internalID: 511836695295341296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6e0178fabffc3b0800000000000000
+      internalID: -5489892689437464925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32402f7b9cf75eb30800000000000000
+      internalID: 4315996322255733795
       vertices: []
       indices: 
       edges: []
