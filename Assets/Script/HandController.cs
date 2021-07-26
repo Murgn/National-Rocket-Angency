@@ -12,6 +12,7 @@ namespace Murgn.Player
         private Hand hand;
         private Image sprite;
 
+
         public GameObject interactable;
         private UnityAction startAction;
         private UnityAction endAction;
@@ -38,24 +39,24 @@ namespace Murgn.Player
         {
             if(interactable == null)
             {
-                hand.state = State.Idle;
+                hand.state = HandStates.Idle;
                 return;
             }
             
             if(!Input.GetMouseButton(0))
             {
-                hand.state = State.Interactable;
+                hand.state = HandStates.Interactable;
             }
 
             if(Input.GetMouseButton(0))
             {
-                hand.state = State.Grab;
+                hand.state = HandStates.Grab;
                 startAction.Invoke();
             }
 
             if(Input.GetMouseButtonUp(0))
             {
-                hand.state = State.Idle;
+                hand.state = HandStates.Idle;
                 endAction.Invoke();
             }
 
@@ -65,15 +66,15 @@ namespace Murgn.Player
         {
             switch(hand.state)
             {
-                case State.Idle:
+                case HandStates.Idle:
                 sprite.sprite = hand.handSprites[0];
                 return;
                 
-                case State.Interactable:
+                case HandStates.Interactable:
                 sprite.sprite = hand.handSprites[1];
                 return;
 
-                case State.Grab:
+                case HandStates.Grab:
                 sprite.sprite = hand.handSprites[2];
                 return;
             }
@@ -81,7 +82,7 @@ namespace Murgn.Player
 
         public void changeInteractable(GameObject gameObject, UnityAction StartAction, UnityAction EndAction)
         {
-            if(hand.state != State.Grab)
+            if(hand.state != HandStates.Grab)
             interactable = gameObject;
             startAction = StartAction;
             endAction = EndAction;

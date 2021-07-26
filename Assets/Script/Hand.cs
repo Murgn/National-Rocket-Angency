@@ -1,11 +1,11 @@
 using UnityEngine;
 namespace Murgn.Player
 {
-    public enum State {Idle, Interactable, Grab}
+    public enum HandStates {Idle, Interactable, Grab}
 
     public class Hand : MonoBehaviour
     {
-        public State state;
+        public HandStates state;
         public Sprite[] handSprites;
     }   
 }
