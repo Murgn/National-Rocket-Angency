@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Murgn
 {
-    public enum JoystickStates {Idle, Forward, Back, Left, Right}
+    public enum JoystickStates {Idle, Up, Down, Left, Right}
 
     public class Joystick : MonoBehaviour
     {
