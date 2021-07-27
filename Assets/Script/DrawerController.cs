@@ -8,7 +8,6 @@ namespace Murgn
 {
     public class DrawerController : MonoBehaviour
     {
-        private Drawer drawer;
         private Hand hand;
 
         private UnityAction startGrab;
@@ -21,7 +20,6 @@ namespace Murgn
 
         void Awake()
         {
-            drawer = GetComponent<Drawer>();
             hand = GameObject.Find("Canvas/Hands").GetComponent<Hand>();
 
             
@@ -44,6 +42,7 @@ namespace Murgn
 
         void OnGrab()
         {
+            
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(transform.position.x, mousePos.y);
         }
