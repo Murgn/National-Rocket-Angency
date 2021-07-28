@@ -6,13 +6,17 @@ using Murgn;
 
 namespace Murgn
 {
+    
     public class DiscordController : MonoBehaviour
     {
+        #if !UNITY_EDITOR
         public Discord.Discord discord;
         private Discord.ActivityManager activityManager;
 
         void Start()
         {
+D           ontDestroyOnLoad(this.gameObject);
+
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
 
@@ -53,5 +57,6 @@ namespace Murgn
             activityManager.ClearActivity((res) => {});
             discord.Dispose();
         }
+        #endif
     }   
 }

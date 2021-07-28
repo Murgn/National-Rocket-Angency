@@ -12,7 +12,6 @@ namespace Murgn
         public CircleCollider2D circleCollider2D;
         public float gravitationalPower;
 
-        // Start is called before the first frame update
         void Update()
         {
             minRS.transform.localScale = new Vector3((planetRadius + gravityMinRange) * 2, (planetRadius + gravityMinRange) * 2, 1);
