@@ -15,7 +15,7 @@ namespace Murgn
 
         void Start()
         {
-D           ontDestroyOnLoad(this.gameObject);
+D           DontDestroyOnLoad(this.gameObject);
 
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
