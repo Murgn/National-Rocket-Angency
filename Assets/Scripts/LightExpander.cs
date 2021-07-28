@@ -12,12 +12,18 @@ namespace Murgn
         public float increment;
         public float max;
 
+        public bool turnOnTheLights = true;
+
         private void Update()
         {
-            if(increment > max) return;
-            light2D.pointLightInnerRadius += increment * Time.deltaTime;
-            light2D.pointLightOuterRadius += increment * Time.deltaTime;
-            increment += increment * Time.deltaTime;
+            if(turnOnTheLights)
+            {
+                if(increment > max) return;
+                light2D.pointLightInnerRadius += increment * Time.deltaTime;
+                light2D.pointLightOuterRadius += increment * Time.deltaTime;
+                increment += increment * Time.deltaTime;
+            }
+            
         }
     }   
 }

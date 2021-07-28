@@ -12,6 +12,8 @@ namespace Murgn
         private Rocket rocket;
         private SpriteRenderer sprite;
 
+        public float gravitationalPower;
+
         
 
         void Awake()
@@ -65,12 +67,12 @@ namespace Murgn
                 return;
 
                 case JoystickStates.Up:
-                rb.AddRelativeForce(Vector3.up * rocket.speed);
+                rb.AddForce(transform.up * (rocket.speed + gravitationalPower));
                 rb.angularVelocity = rb.angularVelocity * 0.95f;
                 return;
                 
                 case JoystickStates.Down:
-                rb.AddRelativeForce(Vector3.down * rocket.speed);
+                rb.AddForce(-transform.up * (rocket.speed + gravitationalPower));
                 rb.angularVelocity = rb.angularVelocity * 0.95f;
                 return;
 
@@ -85,6 +87,23 @@ namespace Murgn
                 rb.velocity = rb.velocity * 0.95f;
                 rb.angularVelocity = rb.angularVelocity * 0.95f;
                 return;
+            }
+        }
+
+        void OnTriggerStay2D(Collider2D obj)
+        {
+            if(obj.CompareTag("Planet"))
+            {
+                rb.drag = 1f;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D obj)
+        {
+            if(obj.CompareTag("Planet"))
+            {
+                rb.drag = 0f;
+                gravitationalPower = 0;
             }
         }
     }   
